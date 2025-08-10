@@ -1,11 +1,6 @@
 "use client";
-import { createClient } from "@supabase/supabase-js";
 import { useState } from "react";
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
+import { supabase } from "@/lib/supabaseClient";
 
 export default function AuthPage() {
   const [email, setEmail] = useState("");

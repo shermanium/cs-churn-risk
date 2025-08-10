@@ -16,6 +16,7 @@ export default function Page() {
         </ul>
         <div className="flex gap-3 pt-2">
           <Link href="/dashboard" className="px-4 py-2 rounded-xl bg-slate-900 text-white">Go to dashboard</Link>
+          <Link href="/demo" className="px-4 py-2 rounded-xl border border-slate-200 bg-white">View demo</Link>
           <a href="/demo.csv" className="px-4 py-2 rounded-xl border border-slate-200 bg-white">Download demo CSV</a>
         </div>
       </div>
