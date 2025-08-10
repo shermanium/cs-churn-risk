@@ -2,12 +2,13 @@ import { cookies } from "next/headers";
 import { createServerClient } from "@supabase/ssr";
 import ChurnDashboard from "@/components/ChurnDashboard";
 import Link from "next/link";
+import { supabaseUrl, supabaseAnonKey } from "@/lib/supabaseClient";
 
 export default async function DashboardPage() {
   const cookieStore = cookies();
   const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    supabaseUrl,
+    supabaseAnonKey,
     { cookies: { get: (key: string) => cookieStore.get(key)?.value } }
   );
 
